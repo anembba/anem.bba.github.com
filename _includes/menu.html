@@ -1,5 +1,6 @@
 <!-- Navigation -->
 <!--navbar-fixed-top-->
+
 <nav class="navbar navbar-default " role="navigation">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -20,7 +21,7 @@
                     <a href="/index.html">Home</a> 
                 </li>
                 <li {% if page.url == '/about' %} class="active"{% endif %}>
-                    <a href="/about">A PROPOS</a>
+                    <a href="/about">A PROPOS {{page.url}} </a>
                 </li>
 
                 <li {% if page.url == '/contact' %} class="active"{% endif %} >
