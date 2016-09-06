@@ -1,13 +1,12 @@
  {% include head.html %}
 
 <body>
-	<div class="brand">AGENCE DE WIALYA DE L'EMPLOI</div>
-	<div class="brand">Bordj Bou Arreridj </div>
-	<div class="address-bar">Rue Mebarkia Smail | Ancien siège Wilaya | BORDJ BOU ARRERIDJ</div>
 	{% include header.html %}
+	{% include menu.html %}
 		{{ content }}
 	{% include footer.html %}
 
+<!-- Script to Activate the Carousel -->
 	<script>
     $('.carousel').carousel({
         interval: 5000 //changes the speed
@@ -16,4 +15,4 @@
 
 </body>
 
-</html>	<!-- Script to Activate the Carousel -->
+</html>	
