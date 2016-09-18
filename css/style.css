@@ -2,3 +2,9 @@
     color: #55C;
     background-color: #E7E680;
 }
+
+.btn-outline:hover {
+    color: #fff;
+    background-color: #563d7c;
+    border-color: #563d7c;
+}
