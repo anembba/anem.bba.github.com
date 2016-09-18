@@ -8,6 +8,6 @@
     border-color: #563d7c;
 }
 .btn.focus, .btn:focus, .btn:hover {
-    color: #333;
+    /*color: #333;*/
     text-decoration: none;
 }
