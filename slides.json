@@ -3,8 +3,8 @@ layout: null
 ---
 
 {
-    {% assign slides = site.static_files | where_exp:"item" ,"item.extname == '.jpg'", "item.path contains  'slide'"   %}
-    
+    {% assign images = site.static_files | where_exp:"item" ,"item.extname == '.jpg'"   %}
+    {% assign slides = images | where_exp:"item" ,"item.path contains  'slide'"  %}
 
   "slides": [
     {% for file in slides %}
