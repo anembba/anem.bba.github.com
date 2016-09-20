@@ -8,8 +8,8 @@ layout: null
   "slides": [
     {% for file in site.static_files %}{
       "path": "{{ file.path }}",
-      "path": "{{ file.path  }}",
-      "path": "{{ file.path }}",
+      "modified_time": "{{ file.modified_time  }}",
+      "extname": "{{ file.extname }}",
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ]
