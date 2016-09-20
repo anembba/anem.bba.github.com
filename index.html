@@ -21,7 +21,7 @@ title: home
 
 						<!-- Wrapper for slides -->
 						<ul>
-							{% for file in site.static_files %}
+							{% for file in site.static_files | file.extname:"jpg" %}
 							<li>{{ file.path }} {{ file.extname }}</li>
 							{% endfor %}
 						</ul>
