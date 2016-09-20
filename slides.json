@@ -10,6 +10,7 @@ layout: null
     {% for file in slides %}
       {
         "path": "{{ file.path }}",
+        "url": "{{ file.path | prepend: site.baseurl }}",
         "modified_time": "{{ file.modified_time  }}",
         "extname": "{{ file.extname }}"
       }
