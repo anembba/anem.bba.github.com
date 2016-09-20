@@ -8,6 +8,13 @@
 
 <!-- Script to Activate the Carousel -->
 	<script>
+		$(function(){
+			$.get( "/slides.json", function( data ) {
+  			// $( ".result" ).html( data );
+			  console.log(data);
+  			alert( "Load was performed." );
+			});
+		})
     $('.carousel').carousel({
         interval: 5000 //changes the speed
     })
