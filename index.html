@@ -20,8 +20,13 @@ title: home
 						</ol>
 
 						<!-- Wrapper for slides -->
-
-
+						<ul>
+							{% for file in site.static_files %}
+							<li>{{ file.path }} {{ file.extname }}</li>
+							{% endfor %}
+						</ul>
+							 
+						
 						<div class="carousel-inner">
 							<div class="item active">
 								<img class="img-responsive img-full" src="img/slide-1.jpg" alt="">
