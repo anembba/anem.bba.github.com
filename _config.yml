@@ -1,0 +1,29 @@
+#
+# Blog Settings
+#
+author: Malekbenz
+description: I'm FullStack Developer
+url: http://anem.info
+title: Malekbenz Blog
+subtitle: ...and you like it
+gravatar_url: http://2.gravatar.com/avatar/8b40bf825a021162659ab478804bff5b"
+
+# Github repositoriesname: Malekbenz, weblog
+#
+# Github repositories
+github_user: Malekbenz
+github_repo_url: https://github.com/malekbenz
+
+# Jekyll Settings
+#
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
+
+paginate_path: "page/:num"
+category_dir: categories
+# Disqus Comments
+disqus_short_name: blog-malekbenz-com
+disqus_show_comment_count: true
+paginate: 1
+exclude: ["README.md"]
+
