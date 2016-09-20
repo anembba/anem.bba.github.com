@@ -7,7 +7,7 @@ layout: null
 
   "slides": [
     {% for file in slides %}
-      
+      {
         "path": "{{ file.path }}",
         "modified_time": "{{ file.modified_time  }}",
         "extname": "{{ file.extname }}"
