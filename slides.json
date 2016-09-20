@@ -4,7 +4,7 @@ layout: null
 
 {
     {% assign images = site.static_files | where_exp:"item" ,"item.extname == '.jpg'"   %}
-    {% assign slides = slides | where_exp:"item" ,"item.path contains  'slid'"  %}
+    {% assign slides = slides  %}
 
   "slides": [
     {% for file in slides %}
