@@ -11,8 +11,9 @@ layout: null
         "path": "{{ file.path }}",
         "modified_time": "{{ file.modified_time  }}",
         "extname": "{{ file.extname }}"
-      }{% endif %}
-    
+      }
+      {% unless forloop.last %},{% endunless %}
+      {% endif %}
     {% endfor %}
   ]
 }
