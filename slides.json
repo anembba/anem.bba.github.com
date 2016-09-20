@@ -3,7 +3,7 @@ layout: null
 ---
 
 {
-    {% assign slides = site.static_files %}
+    {% assign slides = site.static_files | where:"file.extname",".jpg"   %}
 
   "slides": [
     {% for file in slides %}
