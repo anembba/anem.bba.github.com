@@ -2,7 +2,8 @@
 layout: home
 title: home
 ---
-{% assign slideNumber = 8 %}
+{% assign slidelength = 8 %}
+{% assign slideIndex = 7 %}
 	<!-- container -->
 	<div class="container">
 
@@ -13,7 +14,7 @@ title: home
 						<!-- Indicators -->
 						<ol class="carousel-indicators hidden-xs">
 							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-							{% for i in (1..slideNumber) %}
+							{% for i in (1..slideIndex) %}
 							<li data-target="#carousel-example-generic" data-slide-to="{{ i }}"></li>
 							{% endfor %}
 						</ol>
@@ -26,7 +27,7 @@ title: home
 								<img class="img-responsive img-full" src="img/slide-1.jpg" alt="">
 							</div>
 
-						{% for i in (2..slideNumber) %}
+						{% for i in (2..slidelength) %}
 							<div class="item">
 								<img class="img-responsive img-full" src="img/slide-{{ i }}.jpg" alt="">
 							</div>
