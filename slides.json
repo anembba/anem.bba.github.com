@@ -3,17 +3,16 @@ layout: null
 ---
 
 {
-
+    {% assign slides = site.static_files %}
 
   "slides": [
-    {% for file in site.static_files %}
-      {% if file.extname == '.jpg' %} {
+    {% for file in slides %}
+      
         "path": "{{ file.path }}",
         "modified_time": "{{ file.modified_time  }}",
         "extname": "{{ file.extname }}"
       }
       {% unless forloop.last %},{% endunless %}
-      {% endif %}
     {% endfor %}
   ]
 }
