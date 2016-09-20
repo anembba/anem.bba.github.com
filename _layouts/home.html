@@ -6,6 +6,8 @@
 		{{ content }}
 	{% include footer.html %}
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.amd.js"></script>
+
 <!-- Script to Activate the Carousel -->
 	<script id="entry-template" type="text/x-handlebars-template">
 	<div class="entry">
@@ -22,7 +24,7 @@
 			// var template = Handlebars.compile(source);
 			// var context = {title: "My New Post", body: "This is my first post!"};
 			// var html    = template(context);
-			
+
 			$.get( "/slides.json", function( data ) {
   			// $( ".result" ).html( data );
 			  console.log(data);
