@@ -9,7 +9,7 @@
 
 	</div>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.runtime.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 
 <!-- Script to Activate the Carousel -->
 	<script id="slide-template" type="text/x-handlebars-template">
@@ -34,7 +34,7 @@
 			$.get( "/slides.json", function( data ) {
   			// $( ".result" ).html( data );
   			$( ".result" ).html( html );
-			  console.log(data);
+			  console.log("data: ", data);
 			});
 		})
     $('.carousel').carousel({
