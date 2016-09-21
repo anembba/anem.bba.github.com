@@ -11,27 +11,9 @@
 
 <!-- Script to Activate the Carousel -->
 
-
-	<script id="template" type="text/x-handlebars-template">
-	<div class="entry">
-		{% raw %}
-		<h1>{{title}}</h1>
-		
-		{{#each slides}}
-    		<li>{{this.path}} {{this.modified_time}} </li>
-	  	{{/each}}
-
-		<div class="body">
-			{{body}}
-		</div>
-		{% endraw %}
-
-	</div>
-	</script>
-
 	<script>
 		$(function(){
-			var source   = $("#slide-template").html();
+			var source   = $("#slides-template").html();
 			var template = Handlebars.compile(source);
 
 			$.get( "/slides.json", function( data ) {
