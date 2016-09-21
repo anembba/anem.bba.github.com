@@ -18,7 +18,7 @@
 				console.log("Loaded");
 				// console.log(this);
 				var source   = $(this).find("#slides-template").html();
-					console.log(source);
+					// console.log(source);
 				var template = Handlebars.compile(source);
 				$.get( "/slides.json", function( data ) {
 					var context = {slides : data.slides };
