@@ -5,7 +5,7 @@
 	{% include menu.html %}
 		{{ content }}
 	{% include footer.html %}
-	<div id ="result"></div>
+	
 <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 
 <!-- Script to Activate the Carousel -->
@@ -14,7 +14,7 @@
 		$(function(){
 			// var source   = $("#slides-template").html();
 
-			$("#result").load("/partiales/slides.html", function(){
+			$("<div id ='result'"></div>").load("/partiales/slides.html", function(){
 				console.log("Loaded");
 				// console.log(this);
 				var source   = $(this).find("#slides-template").html();
