@@ -37,7 +37,6 @@
 			$.get( "/slides.json", function( data ) {
 				var context = {slides : data.slides };
 				var html    = template(context);
-				console.log(html);
 
 	  			$( ".slides-awem" ).html( html );
 
