@@ -34,7 +34,7 @@
 			$.get( "/slides.json", function( data ) {
   			// $( ".result" ).html( data );
 
-			  $.each(data, function( index, value ) {
+			  $.each(data.slides, function( index, value ) {
 			  		console.log("index: ", index);
 			  		console.log("data: ", data);
 
