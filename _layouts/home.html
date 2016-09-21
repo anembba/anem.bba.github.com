@@ -38,15 +38,16 @@
 
 			$.get( "/slides.json", function( data ) {
   			// $( ".result" ).html( data );
-
-			  $.each(data.slides, function( index, value ) {
-			  		console.log("index: ", index);
-			  		console.log("data: ", value);
-
-				var context = {title: "My New Post", body: "This is my first post!", slides : value };
+			  
+				var context = {title: "My New Post", body: "This is my first post!", slides : data.slides };
 				var html    = template(context);
 				console.log(html);
-				});
+
+			//   $.each(data.slides, function( index, value ) {
+			//   		console.log("index: ", index);
+			//   		console.log("data: ", value);
+
+			// 	});
   			// $( ".result" ).html( html );m
 			//   console.log("data: ", data);
 
