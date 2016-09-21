@@ -6,15 +6,18 @@
 		{{ content }}
 	{% include footer.html %}
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.amd.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.amd.js"></script>
 
 <!-- Script to Activate the Carousel -->
 	<script id="entry-template" type="text/x-handlebars-template">
 	<div class="entry">
+		{% raw %}
 		<h1>{{title}}</h1>
 		<div class="body">
 		{{body}}
 		</div>
+		{% endraw %}
+
 	</div>
 	</script>
 
