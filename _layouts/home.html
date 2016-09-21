@@ -35,13 +35,11 @@
 			var template = Handlebars.compile(source);
 
 			$.get( "/slides.json", function( data ) {
-  			// $( ".result" ).html( data );
-			  
-				var context = {title: "My New Post", body: "This is my first post!", slides : data.slides };
+				var context = {slides : data.slides };
 				var html    = template(context);
 				console.log(html);
 
-	  			$( "#slides-awem" ).html( html );
+	  			$( ".slides-awem" ).html( html );
 
 			});
 		})
