@@ -20,7 +20,7 @@
 		<h1>{{title}}</h1>
 		
 		{{#each slides}}
-    		<li>{{this}}</li>
+    		<li>{{this.path}} {{this.modified_time}} </li>
 	  	{{/each}}
 
 		<div class="body">
