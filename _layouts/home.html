@@ -35,10 +35,13 @@
   			// $( ".result" ).html( data );
 
 			  $.each(data, function( index, value ) {
-  					alert( index + ": " + value );
+			  		console.log("index: ", index);
+			  		console.log("data: ", data);
+
 				});
-  			$( ".result" ).html( html );
-			  console.log("data: ", data);
+  			// $( ".result" ).html( html );
+			//   console.log("data: ", data);
+
 			});
 		})
     $('.carousel').carousel({
