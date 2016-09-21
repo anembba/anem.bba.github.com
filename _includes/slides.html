@@ -16,9 +16,16 @@
     <!-- Wrapper for slides -->
         <div class="carousel-inner">
             {{#each slides}}
-                <div class="item active">
-                    <img class="img-responsive img-full" src="{{this.path}}" alt="">
-                </div>
+                {{#if @index}}
+                    <div class="item">
+                        <img class="img-responsive img-full" src="{{this.path}}" alt="">
+                    </div>
+                {{else}}
+                    <div class="item active">
+                        <img class="img-responsive img-full" src="{{this.path}}" alt="">
+                    </div>
+                {{/if}}
+
             {{/each}}
         </div>
 
