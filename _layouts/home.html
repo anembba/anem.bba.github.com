@@ -5,11 +5,14 @@
 	{% include menu.html %}
 		{{ content }}
 	{% include footer.html %}
+	<div class="result">
+
+	</div>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.runtime.min.js"></script>
 
 <!-- Script to Activate the Carousel -->
-	<script id="entry-template" type="text/x-handlebars-template">
+	<script id="slide-template" type="text/x-handlebars-template">
 	<div class="entry">
 		{% raw %}
 		<h1>{{title}}</h1>
@@ -23,13 +26,14 @@
 
 	<script>
 		$(function(){
-			// var source   = $("#entry-template").html();
-			// var template = Handlebars.compile(source);
-			// var context = {title: "My New Post", body: "This is my first post!"};
-			// var html    = template(context);
+			var source   = $("#slide-template").html();
+			var template = Handlebars.compile(source);
+			var context = {title: "My New Post", body: "This is my first post!"};
+			var html    = template(context);
 
 			$.get( "/slides.json", function( data ) {
   			// $( ".result" ).html( data );
+  			$( ".result" ).html( html );
 			  console.log(data);
 			});
 		})
