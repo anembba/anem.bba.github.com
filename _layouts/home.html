@@ -33,6 +33,10 @@
 
 			$.get( "/slides.json", function( data ) {
   			// $( ".result" ).html( data );
+
+			  $.each(data, function( index, value ) {
+  					alert( index + ": " + value );
+				});
   			$( ".result" ).html( html );
 			  console.log("data: ", data);
 			});
