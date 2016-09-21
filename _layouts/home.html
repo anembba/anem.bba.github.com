@@ -14,7 +14,7 @@
 		$(function(){
 
 			$("<div></div>").load("/partiales/slides.html", function(){
-				var source   = $(this).html();
+				var source   = $(this).find("#slides-template").html();
 				var template = Handlebars.compile(source);
 				$.get( "/slides.json", function( data ) {
 					var context = {slides : data.slides };
