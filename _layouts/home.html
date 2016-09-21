@@ -5,24 +5,31 @@
 	{% include menu.html %}
 		{{ content }}
 	{% include footer.html %}
-	{% include slides.html %}
-
+	<!--{% include slides.html %}-->
+	<div id ="#slides-template"></div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 
 <!-- Script to Activate the Carousel -->
 
 	<script>
 		$(function(){
-			var source   = $("#slides-template").html();
-			var template = Handlebars.compile(source);
+			// var source   = $("#slides-template").html();
 
-			$.get( "/slides.json", function( data ) {
-				var context = {slides : data.slides };
-				var html    = template(context);
+			$("#slides-template").load("/partiales/slides.html", function(){
+				console.log("Slide loaded");
+				var source   = $("#slides-template").html();
+				console.log(source);
+				var template = Handlebars.compile(source);
+				$.get( "/slides.json", function( data ) {
+					var context = {slides : data.slides };
+					var html    = template(context);
 
-	  			$( ".slides-awem" ).html( html );
+					$( ".slides-awem" ).html( html );
+
+				});
 
 			});
+
 		})
     $('.carousel').carousel({
         interval: 5000 //changes the speed
