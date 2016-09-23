@@ -9,6 +9,7 @@ layout: null
   "slides": [
     {% for file in slides %}
       {
+        "index": "{{forloop.index}}",
         "path": "{{ file.path }}",
         "url": "{{ file.path | prepend: site.url }}",
         "modified_time": "{{ file.modified_time  }}",
