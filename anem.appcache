@@ -9,9 +9,7 @@ CACHE MANIFEST
 index.html
 /about/index.html
 /contact/index.html
-{% for file in albums %}
-{{ file.path }}
-{% endfor %}
+{% for file in albums %} {{ file.path }} {% endfor %}
 
 # Use from network if available
 NETWORK:
