@@ -10,7 +10,6 @@ layout: null
   "slides": [
     {% for file in slides %}
       {
-        albumsdir :{{albumsdir}},
         "index": {{forloop.index0}},
         "path": "{{ file.path }}",
         "url": "{{ file.path | prepend: site.url }}",
