@@ -17,7 +17,7 @@ var paths = {
     css: {
         srcWatch: ["./src/css/style.css"],
         libs : ["./src/css/vendor/*.css"],
-        src: ["./src/css/*.css","!./src/css/vendor/*.css"],
+        src: ["./src/css/vendor/*.css","./src/css/*.css"],
         dest: "./dist/css/"
     },
     images: {
@@ -34,7 +34,7 @@ gulp.task("scripts", function () {
 });
 
 gulp.task('minify-css', function () {
-	gulp.src(paths.css.libs, paths.css.src) // path to your file
+	gulp.src( paths.css.src) // path to your file
     .pipe(concat("style.min.css"))
 	.pipe(minifyCss())
 	.pipe(gulp.dest(paths.css.dest));
