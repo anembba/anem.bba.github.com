@@ -27,7 +27,7 @@ var paths = {
 };
 
 gulp.task("scripts", function () {
-    return gulp.src( paths.scripts.libs ,paths.scripts.src)
+    return gulp.src( paths.scripts.src)
         .pipe(concat("app.min.js"))
         .pipe(uglify())
         .pipe(gulp.dest(paths.scripts.dest));
