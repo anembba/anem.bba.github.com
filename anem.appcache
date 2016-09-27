@@ -11,7 +11,6 @@ index.html
 /contact/index.html
 {% for file in albums %}
         "{{ file.path }}"
-   {% unless forloop.last %},{% endunless %}
 {% endfor %}
 
 # Use from network if available
