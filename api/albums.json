@@ -10,7 +10,7 @@ layout: null
   "albums": [
     {% for file in albums %}
       {
-        albumsdir: albumsdir,
+        albumsdir: {{albumsdir}},
         "index": {{forloop.index0}},
         "path": "{{ file.path }}",
         "url": "{{ file.path | prepend: site.url }}",
