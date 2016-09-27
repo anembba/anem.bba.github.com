@@ -39,10 +39,9 @@ gulp.task('minify-css', function () {
 	.pipe(minifyCss())
 	.pipe(gulp.dest(paths.css.dest));
 });
-// Not all tasks need to use streams
-// A gulpfile is just another node program and you can use any package available on npm
+
 gulp.task('clean', function () {
-    // You can use multiple globbing patterns as you would with `gulp.src`
+
     return del(['dist']);
 });
 
@@ -62,5 +61,5 @@ gulp.task('watch', function () {
 });
 
 // The default task (called when you run `gulp` from cli)
-// 'watch', 'images'
-gulp.task('default', ['watch', 'scripts', 'minify-css']);
+// 'watch', 
+gulp.task('default', ['watch', 'images', 'scripts', 'minify-css']);
