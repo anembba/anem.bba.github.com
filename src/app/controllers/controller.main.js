@@ -12,7 +12,7 @@
         console.log("Start controller.main");
 
         function init() {
-            console.log("Start initialisation function");
+            console.log("Start init function");
         };
 
     };

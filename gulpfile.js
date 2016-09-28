@@ -8,7 +8,7 @@ var minifyCss = require("gulp-minify-css");
 
 var paths = {
     scripts: {
-        srcWatch: ['./src/app/**/*.js','./js/*.js'],
+        srcWatch: ['./src/app/**/*.js'],
         libs : ["./src/css/vendor/*.js"],
         src: ["./src/app/app.js", "./src/app/settings/*.js", "./src/app/services/*.js"
             , "./src/app/components/*.js", "./src/app/controllers/*.js", "./src/js/*.js" ],
@@ -29,7 +29,7 @@ var paths = {
 gulp.task("scripts", function () {
     return gulp.src( paths.scripts.src)
         .pipe(concat("app.min.js"))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest(paths.scripts.dest));
 });
 
