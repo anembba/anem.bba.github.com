@@ -61,5 +61,5 @@ gulp.task('watch', function () {
 });
 
 // The default task (called when you run `gulp` from cli)
-// 'watch', 
-gulp.task('default', ['watch', 'images', 'scripts', 'minify-css']);
+// 'watch', 'images',
+gulp.task('default', ['watch',  'scripts', 'minify-css']);
