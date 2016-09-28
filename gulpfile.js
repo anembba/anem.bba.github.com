@@ -42,7 +42,7 @@ gulp.task('minify-css', function () {
 
 gulp.task('clean', function () {
 
-    return del(['dist']);
+    return del(['dist/img']);
 });
 
 // Copy all static images
