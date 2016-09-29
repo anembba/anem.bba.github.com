@@ -13,6 +13,24 @@
                 controllerAs: "vm"
 
             })
+            .when("/about", {
+                templateUrl: "views/about.html",
+                controller: "controller.about as vm",
+                controllerAs: "vm"
+
+            })
+            .when("/contact", {
+                templateUrl: "views/contact.html",
+                controller: "controller.contact as vm",
+                controllerAs: "vm"
+
+            })
+            .when("/download", {
+                templateUrl: "views/download.html",
+                controller: "controller.download as vm",
+                controllerAs: "vm"
+
+            })
             .otherwise({ redirectTo: '/' });
         //  $locationProvider.html5Mode(true);
 

@@ -1,14 +1,14 @@
 (function (app) {
     "use strict";
 
-    app.controller("controller.main", controller);
+    app.controller("controller.about", controller);
 
     controller.$inject = [ "$routeParams", "$location"];
 
     function controller( $routeParams, $location) {
         var self = this;
         self.contents  = "/dist";
-        console.log("controller.main Start");
+        console.log("controller.about Start");
         init()
 
 

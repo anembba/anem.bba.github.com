@@ -1,7 +1,7 @@
 (function (app) {
     "use strict";
 
-    app.controller("controller.main", controller);
+    app.controller("controller.contact", controller);
 
     controller.$inject = [ "$routeParams", "$location"];
 
