@@ -9,7 +9,7 @@
         var self = this;
         self.contents  = "/dist";
         console.log("controller.main Start");
-        init()
+        init();
 
 
         function init() {
