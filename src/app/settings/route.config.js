@@ -7,15 +7,15 @@
 
     function configure($routeProvider ) {
         $routeProvider
-            .when("/", {
-                templateUrl: "views/main.html",
+            .when("/about", {
+                templateUrl: "views/about.html",
                 controller: "controller.main as vm",
                 controllerAs: "vm"
 
             })
-            .when("/about", {
-                templateUrl: "views/about.html",
-                controller: "controller.about as vm",
+            .when("/", {
+                templateUrl: "views/main.html",
+                controller: "controller.main as vm",
                 controllerAs: "vm"
 
             })
