@@ -8,6 +8,8 @@
     function controller( $routeParams, $location) {
         var self = this;
         self.contents  = "/dist";
+        $rootScope.currentPath = $location.path();
+        
         console.log("controller.contact Start");
         init()
 
