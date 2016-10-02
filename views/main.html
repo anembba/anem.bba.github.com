@@ -127,3 +127,28 @@
 
 </div>
 <!-- /.container -->
+
+<!-- Script to Activate the Carousel -->
+
+	<!--<script>
+		$(function(){
+
+			$("<div></div>").load("/partiales/slides.html", function(){
+				var source   = $(this).find("#slides-template").html();
+				var template = Handlebars.compile(source);
+				$.get( "/api/slides.json", function( data ) {
+					var context = {slides : data.slides };
+					var html    = template(context);
+
+					$( ".slides-awem" ).html( html );
+
+				});
+
+			});
+
+		})
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>-->
+
