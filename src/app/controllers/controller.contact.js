@@ -3,13 +3,13 @@
 
     app.controller("controller.contact", controller);
 
-    controller.$inject = [ "$routeParams", "$location"];
+    controller.$inject = [ "$routeParams", "$location", "$rootScope" ];
 
-    function controller( $routeParams, $location) {
+    function controller( $routeParams, $location, $rootScope) {
         var self = this;
         self.contents  = "/dist";
         $rootScope.currentPath = $location.path();
-        
+
         console.log("controller.contact Start");
         init()
 
