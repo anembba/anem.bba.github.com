@@ -1,6 +1,6 @@
 (function (app) {
     "use strict";
-
+    
     app.config(configure);
 
     configure.$inject = ["$routeProvider"];
