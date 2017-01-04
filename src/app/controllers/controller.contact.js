@@ -10,13 +10,5 @@
         self.contents  = "/dist";
         $rootScope.currentPath = $location.path();
 
-        console.log("controller.contact Start");
-        init()
-
-
-        function init() {
-            console.log("init function Start");
-        };
-
     };
 }(angular.module("app")));        
