@@ -1,90 +1,102 @@
-<!DOCTYPE html>
-<html lang="en" >
+---
+layout: home
+title: home
+---
+	<!-- container -->
+	<div class="container">
 
-<head>
+		<div class="row">
+			<div class="box">
+				<div class="col-lg-12 text-center">
+					<div class="slides-awem" >
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Agence Nationale de l'Emploi">
-    <meta name="author" content="malekbenz">
-    <title>Agence Nationale de l'Emploi ANEM' </title>
-    <!-- Bootstrap Core CSS -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+					</div>
 
-    <!-- Custom CSS -->
-    <link href="dist/css/style.min.css" rel="stylesheet">
+					<h2 class="brand-before">
+						<small>Bienvenue</small>
+					</h2>
+					<h1 class="brand-name">AWEM B.B.A</h1>
+					<hr class="tagline-divider">
+					<h2>
+						<small>
+                            <strong>Agence Nationale de l'Emploi</strong>
+                        </small>
+					</h2>
+				</div>
+			</div>
+		</div>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+		<div class="row">
+			<div class="box">
+				<div class="col-lg-12">
+					<hr>
+					<h2 class="intro-text text-center">Services de
+						<strong>L'ANEM</strong>
+					</h2>
+					<hr>
+					<img class="img-responsive img-border img-left" src="{{site.contents}}/img/intro-pic.jpg" width="300" alt="">
+					<hr class="visible-xs">
+					<p>Les services de l’Anem sont constitués notamment d’un réseau d’agences implantées sur tout le territoire national, en nombre assez suffisant et commodément situées pour leurs usagers qui sont les employeurs et les demandeurs d’emploi.</p>
+					<p>Aussi, une agence peut compter dans sa circonscription quelques communes qui lui sont rattachées et qui constituent sa compétence géographique en matière d’enregistrement des offres d’emploi émanant des employeurs qui y sont implantés, ainsi que des demandes d’emploi exprimées par les demandeurs d’emploi qui y résident.</p>
+					<p>En développant son réseau, l’Anem conserve et consolide une position essentielle dans le service public de l’emploi. Car dans l’absence de ses services dans certaines régions, ce sont bien entendu d’autres institutions qui prennent le relai localement. Ce développement lui permet en toute évidence d’accroitre son taux de pénétration, ce qui l’amène à pouvoir prétendre à endiguer le phénomène des recrutements directs et à juguler un tant soit peu l’emploi informel.</p>
+				</div>
 
-</head>
-<body  ng-app="app">
-    
+			</div>
+		</div>
 
-<div class="brand">AWEM Bordj Bou Arreridj</div>
+		<div class="row">
+			<div class="box">
+				<div class="col-lg-12">
+					<hr>
+					<h2 class="intro-text text-center">
+						<strong>Accompagnement</strong>
+					</h2>
+					<hr>
+					<img class="img-responsive img-border img-left" src="{{site.contents}}/img/Accompagnement.jpg" width="300" alt="">
 
-<nav class="navbar navbar-default " role="navigation" >
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-            <a class="navbar-brand" href="index.html">AWEM.BBA</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li ng-class="{'active':currentPath =='/'}">
-                    <a href="#/">Home </a> 
-                </li>
-                <li ng-class="{'active':currentPath =='/about'}">
-                    <a href="#/about/">A PROPOS</a>
-                </li>
+					<p>Favoriser l’insertion professionnelle des demandeurs d’emploi :</p>
+						<ul>
+							<li><p>Conseiller les demandeurs d’emploi dans leur démarche de recherche d'emploi.</p> </li>
+							<li><p>Les aider à valoriser leurs atouts.</p></li>
+							<li><p>Leur permettre d’améliorer leur employabilité.</p></li>
+							<li><p>Faciliter la réalisation de leur projet professionnel.</p></li>
+						</ul>
 
-                <li  ng-class="{'active':currentPath =='/contact'}">
-                    <a href="#/contact/">Contact</a>
-                </li>
-                <li  ng-class="{'active':currentPath =='/download'}">
-                    <a href="#/download/">Documents utils</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
 
-<ng-view></ng-view>
+				</div>
+				<div class="col-lg-12">
+					<hr>
+					<h2 class="intro-text text-center">
+						<strong>Prise d'Offre d'Emploi</strong>
+					</h2>
+					<hr>
+					<img class="img-responsive img-border img-left" src="{{site.contents}}/img/Offres.jpg" width="300" alt="">
+					<ul>
+						<p>Formaliser les besoins de l'employeur, en matière de recrutement, lors :</p>
+						<li><p>Dépôt d'offres</p></li>
+						<li><p>La visite d'entreprise</p></li>
+						<li><p>Retour d'information de la recherche active</p></li>
+					</ul>
+				</div>
+				<div class="col-lg-12">
+					<hr>
+					<h2 class="intro-text text-center">
+						<strong>Mises En Relation</strong>
+					</h2>
+					<hr>
+					<img class="img-responsive img-border img-left" src="{{site.contents}}/img/MiseRelation.jpg" width="300" alt="">
+					<ul>
+						<li><p>Assurer le suivi des offres d’emploi.</p></li>
+						<li><p>Suivre les opérations d'orientations des demandeurs d’emploi vers les employeurs (MER).</p></li>
+						<li><p>Prendre connaissance des résultats des opérations de Mise En Relation auprès des employeurs et les comptabiliser (Placements réalisés / non réalisés)</p></li>
+						<li><p>Renégocier l'offre d’emploi lorsque les candidats proposés n'auront pas été retenus.</p></li>
+						<li><p>Disposer d’informations fiables et actualisées sur le marché de l’emploi.</p></li>
 
-<footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; malekbenz.com 2016</p>
-                </div>
-            </div>
-        </div>
-</footer>
+					</ul>
+				</div>
 
-    	<!-- jQuery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+			</div>
+		</div>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
-
-<script src="/dist/js/app.min.js"></script>
-</body>    
+	</div>
+	<!-- /.container -->
