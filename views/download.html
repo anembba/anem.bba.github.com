@@ -8,14 +8,11 @@
                         <hr>
                 </div>
 
-                <div class="col-md-6" ng-repeat="doc in vm.documents.docs">
-                        <a href="{{doc.path}}" class="btn btn-lg btn-outline">
-                    {{doc.filename}}
-                    </a>
-                </div>
-                <div class="col-md-6">
-
-                        <div class="clearfix"></div>
+                <div class="col-xs-12 col-md-6" ng-repeat="doc in vm.documents.docs">
+                        <a href="{{doc.path}}" class="btn btn-lg btn-outline btn-download">
+                            {{doc.filename}}
+                         </a>
                 </div>
         </div>
-        <!-- /.container -->
+</div>
+<!-- /.container -->

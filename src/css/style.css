@@ -15,3 +15,8 @@
 .btn {
     border: 1px solid transparent;
 }
+
+.btn-download{
+    display: block;
+    text-align: left;
+}
