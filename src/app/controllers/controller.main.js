@@ -3,15 +3,16 @@
 
     app.controller("controller.main", controller);
 
-    controller.$inject = ["$routeParams", "$location", "$rootScope", "dataservice"];
+    controller.$inject = [ "$location", "$rootScope", "dataservice"];
 
-    function controller($routeParams, $location, $rootScope, dataservice) {
+    function controller( $location, $rootScope, dataservice) {
         var self = this;
         self.slides = {
             list: []
         };
 
         self.contents = "/dist";
+
         $rootScope.currentPath = $location.path();
 
         init();
