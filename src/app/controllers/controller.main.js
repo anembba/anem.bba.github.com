@@ -3,9 +3,9 @@
 
     app.controller("controller.main", controller);
 
-    controller.$inject = ["$routeParams", "$location", "$rootScope", "$http", "$interval"];
+    controller.$inject = ["$routeParams", "$location", "$rootScope", "dataservice"];
 
-    function controller($routeParams, $location, $rootScope, $http, $interval) {
+    function controller($routeParams, $location, $rootScope, dataservice) {
         var self = this;
         self.slides = {
             list: []
@@ -13,22 +13,18 @@
 
         self.contents = "/dist";
         $rootScope.currentPath = $location.path();
-        var slideUrl = "https://anem.info/api/slides.json"
 
         init();
-
         function init() {
-
-            $http.get(slideUrl)
-                .then(function (response) {
-                    self.slides.list = response.data.slides;
+            dataservice.getSlides()
+                .then(function (slides) {
+                    console.log("slide from servie", slides);
+                    self.slides.list = slides;
                     $('.carousel').carousel({
                         interval: 5000 //changes the speed
                     })
-
-                });
-
-        };
+                })
+        }
 
     };
 } (angular.module("app")));        

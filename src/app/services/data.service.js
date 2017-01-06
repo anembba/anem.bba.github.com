@@ -1,6 +1,6 @@
 // dataservice factory
 (function (app) {
-    
+
     app.factory('dataservice', dataservice);
 
     dataservice.$inject = ['$http', 'storage'];
@@ -10,11 +10,19 @@
         var url = "https://anem.info/api/";
 
         return {
-            getSlides: getSlides
+            getSlides: getSlides,
+            getDocuments: getDocuments
         };
-        
 
         function getSlides() {
+            return $http.get(url + "slides.json")
+                .then(function (response) {
+                    return response.data.slides;
+                });
+        };
+
+        function getDocuments() {
+
         };
 
         function getOneComplete(response) {
