@@ -13,8 +13,6 @@
 
         self.contents = "/dist";
 
-        $rootScope.currentPath = $location.path();
-
         init();
         function init() {
             dataservice.getSlides()

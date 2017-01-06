@@ -5,8 +5,9 @@
 
     controller.$inject = [  "$location", "$rootScope" ];
     function controller(  $location, $rootScope) {
+        
         var self = this;
         self.contents  = "/dist";
-        $rootScope.currentPath = $location.path();
+
     };
 }(angular.module("app")));        

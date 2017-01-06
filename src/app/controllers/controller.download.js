@@ -10,7 +10,6 @@
         self.title = "Documents à télécharger";
         self.documents = {};
         self.contents = "/dist";
-        $rootScope.currentPath = $location.path();
 
         dataservice.getDocuments()
             .then(function (response) {
