@@ -3,11 +3,11 @@
 
     app.controller("controller.about", controller);
 
-    controller.$inject = [  "$location", "$rootScope" ];
-    function controller(  $location, $rootScope) {
-        
+    controller.$inject = [];
+    function controller() {
+
         var self = this;
-        self.contents  = "/dist";
+        self.contents = "/dist";
 
     };
-}(angular.module("app")));        
+} (angular.module("app")));        

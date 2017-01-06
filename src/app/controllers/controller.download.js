@@ -3,9 +3,9 @@
 
     app.controller("controller.download", controller);
 
-    controller.$inject = [ "$location", "$rootScope", "dataservice"];
+    controller.$inject = [  "dataservice"];
 
-    function controller($location, $rootScope, dataservice) {
+    function controller( dataservice) {
         var self = this;
         self.title = "Documents à télécharger";
         self.documents = {};

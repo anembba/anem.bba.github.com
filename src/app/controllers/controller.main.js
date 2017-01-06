@@ -3,9 +3,9 @@
 
     app.controller("controller.main", controller);
 
-    controller.$inject = [ "$location", "$rootScope", "dataservice"];
+    controller.$inject = ["dataservice"];
 
-    function controller( $location, $rootScope, dataservice) {
+    function controller(  dataservice) {
         var self = this;
         self.slides = {
             list: []
