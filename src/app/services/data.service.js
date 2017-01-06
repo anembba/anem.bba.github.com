@@ -3,11 +3,9 @@
 
     app.factory('dataservice', dataservice);
 
-    dataservice.$inject = ['$http', 'storage'];
+    dataservice.$inject = ['$http', 'storage', 'config'];
 
-    function dataservice($http, storage) {
-
-        var url = "https://anem.info/api/";
+    function dataservice($http, storage, config) {
 
         return {
             getSlides: getSlides,
@@ -15,13 +13,26 @@
         };
 
         function getSlides() {
-            return $http.get(url + "slides.json")
+            return $http.get(config.SLIDES)
                 .then(function (response) {
                     return response.data.slides;
                 });
         };
 
         function getDocuments() {
+            return $http.get(config.DOCUMENTS )
+                .then(function (response) {
+                    angular.forEach(response.data.docs, function (doc) {
+                        doc.filename = getFileName(doc.path);
+                    });
+                    return response.data;
+                });
+
+        };
+
+        function getFileName(fullPath) {
+            var filename = fullPath.replace(/^.*[\\\/]/, '');
+            return filename.substring(0, filename.indexOf('.'))
 
         };
 

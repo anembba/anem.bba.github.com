@@ -3,28 +3,18 @@
 
     app.controller("controller.download", controller);
 
-    controller.$inject = ["$routeParams", "$location", "$rootScope", "$http"];
+    controller.$inject = ["$routeParams", "$location", "$rootScope", "dataservice"];
 
-    function controller($routeParams, $location, $rootScope, $http) {
+    function controller($routeParams, $location, $rootScope, dataservice) {
         var self = this;
         self.title = "Documents à télécharger";
         self.documents = {};
         self.contents = "/dist";
         $rootScope.currentPath = $location.path();
-
-        var url = "https://anem.info/api/documents.json";
-        function getFileName(fullPath) {
-            var filename = fullPath.replace(/^.*[\\\/]/, '');
-            return filename.substring(0, filename.indexOf('.'))
-
-        };
-
-        $http.get(url)
+        
+        dataservice.getDocuments()
             .then(function (response) {
-                angular.forEach(response.data.docs, function (doc) {
-                    doc.filename = getFileName(doc.path);
-                });
-                self.documents = response.data;
+                self.documents = response;
             });
 
     };

@@ -18,10 +18,9 @@
         function init() {
             dataservice.getSlides()
                 .then(function (slides) {
-                    console.log("slide from servie", slides);
                     self.slides.list = slides;
                     $('.carousel').carousel({
-                        interval: 5000 //changes the speed
+                        interval: 6000 //changes the speed
                     })
                 })
         }
