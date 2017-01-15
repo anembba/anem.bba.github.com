@@ -9,15 +9,15 @@ var minifyCss = require("gulp-minify-css");
 var paths = {
     scripts: {
         srcWatch: ['./src/app/**/*.js'],
-        libs : ["./src/css/vendor/*.js"],
-        src: ["./src/app/app.js", "./src/app/settings/*.js", "./src/app/services/*.js"
-            , "./src/app/components/*.js", "./src/app/controllers/*.js", "./src/js/*.js" ],
+        libs: ["./src/css/vendor/*.js"],
+        src: ["./src/app/app.js", "./src/app/settings/*.js", "./src/app/services/*.js", "./src/app/directives/*.js"
+            , "./src/app/components/*.js", "./src/app/controllers/*.js", "./src/js/*.js"],
         dest: "./dist/js/"
     },
     css: {
         srcWatch: ["./src/css/style.css"],
-        libs : ["./src/css/vendor/*.css"],
-        src: ["./src/css/vendor/*.css","./src/css/*.css"],
+        libs: ["./src/css/vendor/*.css"],
+        src: ["./src/css/vendor/*.css", "./src/css/*.css"],
         dest: "./dist/css/"
     },
     images: {
@@ -27,17 +27,17 @@ var paths = {
 };
 
 gulp.task("scripts", function () {
-    return gulp.src( paths.scripts.src)
+    return gulp.src(paths.scripts.src)
         .pipe(concat("app.min.js"))
         .pipe(uglify())
         .pipe(gulp.dest(paths.scripts.dest));
 });
 
 gulp.task('minify-css', function () {
-	gulp.src( paths.css.src) // path to your file
-    .pipe(concat("style.min.css"))
-	.pipe(minifyCss())
-	.pipe(gulp.dest(paths.css.dest));
+    gulp.src(paths.css.src) // path to your file
+        .pipe(concat("style.min.css"))
+        .pipe(minifyCss())
+        .pipe(gulp.dest(paths.css.dest));
 });
 
 gulp.task('clean', function () {
@@ -62,4 +62,4 @@ gulp.task('watch', function () {
 
 // The default task (called when you run `gulp` from cli)
 // 'watch', 'images',
-gulp.task('default', ['watch',  'scripts', 'minify-css']);
+gulp.task('default', ['watch', 'scripts', 'minify-css']);
