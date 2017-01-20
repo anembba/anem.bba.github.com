@@ -5,7 +5,7 @@
 
     controller.$inject = ["dataservice"];
 
-    function controller(  dataservice) {
+    function controller(dataservice) {
         var self = this;
         self.slides = {
             list: []
@@ -18,7 +18,7 @@
             dataservice.getSlides()
                 .then(function (slides) {
                     self.slides.list = slides;
-                    $('.carousel').carousel({interval: 6000 })
+                    $('.carousel').carousel({ interval: 6000 })
                 })
         }
 
