@@ -3,15 +3,15 @@
 
     app.controller("controller.main", controller);
 
-    controller.$inject = ["dataservice"];
+    controller.$inject = ["dataservice", "config"];
 
-    function controller(dataservice) {
+    function controller(dataservice, config) {
         var self = this;
         self.slides = {
             list: []
         };
 
-        self.contents = "/dist";
+        self.contents = config.DIST;
 
         init();
         function init() {

@@ -8,7 +8,5 @@
     function controller() {
 
         var self = this;
-        self.contents = "/dist";
-
     };
 } (angular.module("app")));        

@@ -3,14 +3,13 @@
 
     app.controller("controller.download", controller);
 
-    controller.$inject = ["dataservice"];
+    controller.$inject = ["dataservice", "config"];
 
-    function controller(dataservice) {
+    function controller(dataservice, config) {
         var self = this;
         self.title = "Documents à télécharger";
         self.documents = {};
-        self.contents = "/dist";
-
+        self.contents = config.DIST;
         dataservice.getDocuments()
             .then(function (response) {
                 self.documents = response;
