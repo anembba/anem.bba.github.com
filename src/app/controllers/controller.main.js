@@ -7,11 +7,11 @@
 
     function controller(dataservice, config) {
         var self = this;
+        self.contents = config.DIST;
         self.slides = {
             list: []
         };
 
-        self.contents = config.DIST;
 
         init();
         function init() {
