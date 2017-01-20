@@ -5,8 +5,8 @@
         .constant("config", {
             URL: "https://anem.info",
             DIST:"/dist",
-            DOCUMENTS: "https://anem.info/api/documents.json",
-            SLIDES: "https://anem.info/api/slides.json"
+            DOCUMENTS: "/api/documents.json",
+            SLIDES: "/api/slides.json"
         });
 
 } ());
