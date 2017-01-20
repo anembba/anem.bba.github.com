@@ -25,7 +25,8 @@ category_dir: categories
 disqus_short_name: blog-malekbenz-com
 disqus_show_comment_count: true
 #
-gems: [jekyll-paginate]
+redirects: yes
+gems: [jekyll-paginate, jekyll-redirect-from]
 paginate: 1
 exclude: ["README.md","gulpfile.js", "src", "debug.log",node_modules, package.json, npm-debug.log, gulp.js,  bower_components]
 

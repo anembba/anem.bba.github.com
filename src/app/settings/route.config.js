@@ -3,12 +3,12 @@
 
     app.config(configure);
 
-    configure.$inject = ["$stateProvider", "$urlRouterProvider"];
+    configure.$inject = ["$stateProvider", "$urlRouterProvider", "$locationProvider"];
 
-    function configure($stateProvider, $urlRouterProvider) {
+    function configure($stateProvider, $urlRouterProvider, $locationProvider) {
 
         $urlRouterProvider.otherwise('/');
-
+        $locationProvider.html5Mode(true);
         $stateProvider
             .state('home', {
                 url: '/',
@@ -34,5 +34,8 @@
                 controller: "controller.download",
                 controllerAs: "vm"
             });
+
+
     };
+
 } (angular.module("app")));
