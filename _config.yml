@@ -4,14 +4,14 @@
 author: Malekbenz
 description: I'm FullStack Developer
 url: https://anem.info
-title: Malekbenz Blog
-subtitle: ...and you like it
+title: anem.info (website)
+subtitle: ...website
 gravatar_url: http://2.gravatar.com/avatar/8b40bf825a021162659ab478804bff5b"
 contents: /dist 
-# Github repositoriesname: Malekbenz, weblog
+# Github repositoriesname: malekbenz, 
 #
 # Github repositories
-github_user: Malekbenz
+github_user: malekbenz
 github_repo_url: https://github.com/malekbenz
 
 # Jekyll Settings
@@ -25,7 +25,6 @@ category_dir: categories
 disqus_short_name: blog-malekbenz-com
 disqus_show_comment_count: true
 #
-gems: [jekyll-paginate, jekyll-redirect-from]
-paginate: 1
+plugins: []
 exclude: ["README.md","gulpfile.js", "src", "debug.log",node_modules, package.json, npm-debug.log, gulp.js,  bower_components]
 
