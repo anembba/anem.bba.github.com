@@ -3,10 +3,11 @@ layout: null
 ---
 
 {
-    
+  
+    {% assign exelsDocs = site.static_files | where_exp:"item" ,"item.extname contains  '.xlsx'"   %}
     {% assign docs = site.static_files | where_exp:"item" ,"item.extname contains  '.doc'"   %}
   
-  "total": {{docs | size }},
+  "total": {{docs | size } + {exelsDocs | size }},
   "docs": [
     {% for file in docs %}
       {
