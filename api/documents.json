@@ -4,7 +4,7 @@ layout: null
 
 {
     
-    {% assign docs = site.static_files | where_exp:"item" ,"item.extname contains  '.doc'||'.xlsx' "   %}
+    {% assign docs = site.static_files | where_exp:"item" ,"item.extname contains  '.doc'"   %}
   
   "total": {{docs | size }},
   "docs": [
