@@ -10,7 +10,19 @@ layout: null
   "total": {{docs | size }},
   "totalexcel": {{exelsDocs | size }},
   "docs": [
-    {% for file in docs %}
+
+  {% for file in exelsDocs %}
+    {
+      "index": {{forloop.index0}},
+      "path": "{{ file.path }}",
+      "url": "{{ file.path | prepend: site.url }}",
+      "modified_time": "{{ file.modified_time  }}",
+      "extname": "{{ file.extname }}"
+    },
+    
+  {% endfor %}
+
+  {% for file in docs %}
       {
         "index": {{forloop.index0}},
         "path": "{{ file.path }}",
@@ -18,18 +30,9 @@ layout: null
         "modified_time": "{{ file.modified_time  }}",
         "extname": "{{ file.extname }}"
       }
-      {% unless forloop.last %},{% endunless %}
-    {% endfor %}
+    {% unless forloop.last %},{% endunless %}
+  {% endfor %}
 
-    {% for file in exelsDocs %}
-      ,{
-        "index": {{forloop.index0}},
-        "path": "{{ file.path }}",
-        "url": "{{ file.path | prepend: site.url }}",
-        "modified_time": "{{ file.modified_time  }}",
-        "extname": "{{ file.extname }}"
-      }
-      {% unless forloop.last %},{% endunless %}
-    {% endfor %}
+   
   ]
 }
