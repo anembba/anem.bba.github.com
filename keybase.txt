@@ -1,4 +1,4 @@
 ---
 layout: none
-permalink: .well-known/ifCj3dW-JzTt3cGgrqdV6RBlmmhZ8BjwKBWSSKGQxpQ
+permalink: .well-known/keybase.txt
 ---
