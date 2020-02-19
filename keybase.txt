@@ -1,4 +1,5 @@
 ---
 layout: none
 permalink: .well-known/keybase.txt
+permalink: .well-known/ifCj3dW-JzTt3cGgrqdV6RBlmmhZ8BjwKBWSSKGQxpQ
 ---
