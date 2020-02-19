@@ -1,4 +1,4 @@
 ---
 layout: none
-permalink: .well-known/ifCj3dW-JzTt3cGgrqdV6RBlmmhZ8BjwKBWSSKGQxpQ
+permalink: .well-known/acme-challenge/p3ZDXbpw_P9o44CxI548CqI1d2D5Mpz_cW7oP32jOOI
 ---
