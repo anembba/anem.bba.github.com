@@ -27,5 +27,5 @@ disqus_show_comment_count: true
 #
 plugins: []
 exclude: ["README.md","gulpfile.js", "src", "debug.log",node_modules, package.json, npm-debug.log, gulp.js,  bower_components]
-include: [".well-known"]
+include: [".well-known",".well-known/acme-challenge"]
 
